@@ -1,0 +1,64 @@
+%h1
+  It's Time to Convert Your Bitcoins to Zolds!
+
+%p
+  You convert
+  %input{id: 'btc', oninput: 'wts_recalc();', value: '1'}
+  BTC
+  to
+  %span{id: 'zld'}
+  ZLD.
+
+%p
+  You hodl for
+  %input{id: 'months', oninput: 'wts_recalc();', value: '6'}
+  months.
+
+%p
+  Your total investment:
+  %span{id: 'spend'}
+
+%p
+  Zerocracy will add:
+  %span{id: 'zc_input'}
+
+%p
+  Bitcoin growth will add:
+  %span{id: 'btc_growth'}
+
+%p
+  Your gross return:
+  %span{id: 'gross'}
+
+%p
+  The exchange fee:
+  %span{id: 'fee'}
+
+%p
+  Your net profit:
+  %strong{id: 'net'}
+
+%p{id: 'step2', style: 'display: none'}
+  Enter your mobile phone:
+  %input{id: 'phone'}
+
+%p{id: 'step3', style: 'display: none'}
+  Auth code:
+  %input{id: 'code'}
+
+%p{id: 'step4', style: 'display: none'}
+  This is your keygap:
+  %code{id: 'keygap'}
+
+%p{id: 'step5', style: 'display: none'}
+  %img{id: 'qr', style: 'width:128px;height:128px;', src: ''}
+  Send
+  %span{id: 'amount'}
+  bitcoins
+  to this address:
+  %code{id: 'address'}
+
+%p{id: 'step6'}
+  %input{type: 'submit', id: 'button', value: 'Start'}
+
+%p{id: 'error'}
