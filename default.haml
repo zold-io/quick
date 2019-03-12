@@ -1,0 +1,156 @@
+%h1
+  Convert Your Bitcoins to Zolds and Make 4% Each Month, Guaranteed:
+
+%div.small.gray.center{style: 'float:right;margin-left:1em;margin-bottom:1em;width:320px;'}
+  %a{href: '/rate'}
+    %img{src: '/graph.svg?keys=Value&div=100&digits=2', style: 'width:320px;'}
+  The graph demonstrates how the value of ZLD in US dollars
+  was changing over the last few months, more details
+  = succeed '.' do
+    %a{href: '/rate'} here
+
+%p
+  According to many analysts, the crypto market is expecting its next hype within the next few months.
+  Most promising assets are the ones that are based on new and unique technologies,
+  not just Blockchain.
+  Zold is exactly that, with its own
+  = succeed ',' do
+    %a{href: 'https://blog.zold.io/2018/08/02/consensus.html'} consensus algorithm
+  the software built from the group up,
+  and a quickly growing community of software developers. This is your
+  opportunity to jump into this quickly uprising trend and convert some of your
+  bitcoins to zolds.
+
+%p
+  %img{src: 'http://www.0crat.com/svg/logo.svg', style: 'float:right;width:128px;height:128px;margin-bottom:.5em;margin-left:.5em;'}
+  Zold is designed by the R&D team of
+  %a{href: 'http://www.zerocracy.com'} Zerocracy
+  lead by
+  = succeed ',' do
+    %a{href: 'https://www.yegor256.com'} Yegor Bugayenko
+  their CEO: here is the
+  = succeed '.' do
+    %a{href: 'http://papers.zold.io/wp.pdf'} White Paper
+  Since 2009, the company, which is headquartered in Palo Alto, California and is backed
+  by venture capital and private funds of its founders, is developing
+  Artificial Intelligence (AI) software to simplify routine management operations
+  in software development projects. The
+  %a{href: 'https://blog.zold.io/2018/07/08/mission.html'} global mission
+  of Zold is to help the world of software developers get rid of
+  boring and ineffective management.
+
+%table.quick
+  %colgroup
+    %col{style: 'width: 12em'}
+    %col{style: ''}
+  %tbody
+    %tr
+      %td.right
+        You convert now:
+      %td
+        %input{type: 'number', id: 'btc', oninput: 'wts_recalc();', style: 'width:5em', autocomplete: 'off', required: true, tabindex: 1, autofocus: true, value: '0.1'}
+        BTC
+        ➜
+        %span{id: 'zld'}
+        ZLD
+    %tr
+      %td.right
+        You
+        %a{href: 'https://en.wikipedia.org/wiki/Hodl'} hodl
+        for:
+      %td
+        %input{type: 'number', id: 'months', oninput: 'wts_recalc();', style: 'width:3em', autocomplete: 'off', required: true, tabindex: 2, value: '6'}
+        months
+
+%table.quick.pl
+  %colgroup
+    %col{style: 'width: 12em'}
+    %col{style: ''}
+    %col{style: ''}
+  %tbody
+    %tr
+      %td.right
+        Total investment:
+      %td.right
+        %span{id: 'spend'}
+    %tr
+      %td.right
+        Zerocracy increment:
+      %td.right.green
+        %span{id: 'zc_input'}
+      %td
+        %a{href: 'https://blog.zold.io/2019/01/16/make-me-rich.html'} Why?
+    %tr
+      %td.right
+        Bitcoin rate growth:
+      %td.right.green
+        %span{id: 'btc_growth'}
+      %td
+        = '~10%/month'
+    %tr
+      %td.right
+        Gross return:
+      %td.right.green
+        %span{id: 'gross'}
+    %tr
+      %td.right
+        Exchange fee:
+      %td.right.red
+        %span{id: 'fee'}
+    %tr
+      %td.right
+        Net profit:
+      %td.right{style: 'border: 1px solid gray;'}
+        %strong{id: 'net'}
+
+%p{id: 'step2', style: 'display: none'}
+  In order to create an account we have to identify you first.
+  Zold is a fully anonymous system: we don't track your IP and don't keep any logs.
+  All we need to know about you is your phone number, which will uniquely
+  identify your account here. A text message will be sent with an authorization code.
+  %br
+  %br
+  Your mobile phone:
+  %input{type: 'text', name: 'phone', id: 'phone', pattern: "[0-9]+", size: 17, placeholder: 'e.g. 14085551234', required: true, tabindex: 4}
+
+%p{id: 'step3', style: 'display: none'}
+  4-digit authorization code you just received:
+  %input{type: 'text', name: 'code', id: 'code', pattern: "[0-9]+", size: 5, autocomplete: 'off', tabindex: 5}
+
+%p{id: 'step4', style: 'display: none'}
+  This is your
+  = succeed ':' do
+    %a{href: 'https://blog.zold.io/2018/07/18/keygap.html'} keygap
+  = succeed '.' do
+    %code{id: 'keygap'}
+  Write it down where it's safe.
+  If you lose it, you will lose your Zold coins!
+  We will not be able to restore this information!
+
+%p{id: 'step5', style: 'display: none'}
+  %img{id: 'qr', style: 'float:right;margin-left:.5em;margin-bottom:.5em;width:128px;height:128px;', src: ''}
+  Send
+  %strong
+    %span{id: 'amount'}
+    bitcoins
+  to this address:
+  %code{id: 'address'}
+  (it is valid only within the next 15 minutes!)
+  Once the payment arrives, which may take up to an hour, you can go to
+  %a{href: '/mobile_send'} your account
+  where you will be able to manage your wallet, convert ZLD back to bitcoins
+  and send payments to other users.
+  Thanks for joining Zold community and helping Zerocracy
+  make the world of software development better!
+
+%p{id: 'step6'}
+  %input{type: 'submit', id: 'button', tabindex: 5, value: 'Start'}
+
+%p.small.gray{id: 'error'}
+
+%p.small.gray
+  WARNING: The information contained herein is not intended to be a source
+  of advice or credit analysis with respect to the material
+  presented, and the information and/or documents contained in this website
+  do not constitute investment advice. Make sure you understand
+  the risks associated with each and any investment.
