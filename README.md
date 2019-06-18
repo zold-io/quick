@@ -2,6 +2,9 @@
 
 [![Donate via Zerocracy](https://www.0crat.com/contrib-badge/CB28FH2NR.svg)](https://www.0crat.com/contrib/CB28FH2NR)
 
+[![License](https://img.shields.io/badge/license-MIT-green.svg)](https://github.com/yegor256/takes/blob/master/LICENSE.txt)
+[![Hits-of-Code](https://hitsofcode.com/github/zold-io/quick)](https://hitsofcode.com/view/github/zold-io/quick)
+
 This is a collection of HAML templates for
 this [web page](https://wts.zold.io). You can create your
 own template, submit a pull request, and we will merge it into
